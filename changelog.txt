@@ -6,3 +6,5 @@ The Mutatron Update: added support for the gendustry Mutatron
 3.0.1
 first release by MrEmielH
 code cleanup
+3.0.1
+deleted end that caused crash
