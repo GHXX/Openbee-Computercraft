@@ -29,9 +29,8 @@ if config == nil then
     ["productDir"] = "west",
     ["analyzerDir"] = "north",
    	["mutatronSide"] = "peripheral_0",
-   	["mutatronDir"] = "down",
-	   ["mutatronPipeSide"] = "left",
-	   ["useMutatron"] = true
+   	["mutatronPipeSide"] = "left",
+	["useMutatron"] = true
   }
   saveFile("bee.config", config)
 end
