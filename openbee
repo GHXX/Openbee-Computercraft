@@ -272,10 +272,7 @@ function mutateSpeciesChance(mutations, species1, species2, targetSpecies)
       end
     end
   end
-  if useMutatron then
-	if species1 ~= targetSpecies and species2 ~= targetSpecies then
-		chance[targetSpecies] = chance[targetSpecies] * 4
-	end
+  
   end
   return chance[targetSpecies] or 0.0
 end
