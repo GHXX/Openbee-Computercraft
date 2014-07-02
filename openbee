@@ -768,8 +768,7 @@ function selectPair(mutations, scorers, catalog, targetSpecies)
     if catalog.referencePrincessesBySpecies[targetSpecies] ~= nil and
         catalog.referenceDronesBySpecies[targetSpecies] ~= nil then
       logLine("Breeding extra drone from reference bees")
-	  dropApiary = true
-      return {
+	  return {
         ["princess"] = catalog.referencePrincessesBySpecies[targetSpecies],
         ["drone"] = catalog.referenceDronesBySpecies[targetSpecies]
       }
@@ -807,16 +806,22 @@ function isInjector(bee1, bee2, targetSpecies)
     if bee1.beeInfo.active.species == targetSpecies or
         bee2.beeInfo.active.species == targetSpecies then
         return true
-    end
-  else 
-   return false
+    else 
+		return false
+	end
   end
 end
 
 function isBreeder(bee1, bee2)
 	if bee1.beeInfo.isAnalyzed and bee2.beeInfo.isAnalyzed then
 		if bee1.beeInfo.active.species == bee2.beeInfo.active.species then
-		return true
+			return true
+		else
+			return false
+		end
+	elseif bee1.beeInfo.isAnalyzed == false and bee2.beeInfo.isAnalyzed == false then
+		if bee1.beeInfo.displayName == bee2.beeInfo.displayName then
+			return true
 		end
 	end
 end
@@ -826,9 +831,11 @@ function isPureBredDrop(bee1, bee2)
     if bee1.beeInfo.active.species == bee1.beeInfo.inactive.species and
         bee2.beeInfo.active.species == bee2.beeInfo.inactive.species then
         return true
-    end
-  else 
-   return false
+    else 
+		return false
+	end
+  elseif bee1.beeInfo.isAnalyzed == false and bee2.beeInfo.isAnalyzed == false then
+	return false
   end
 end
 
