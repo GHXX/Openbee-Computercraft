@@ -8,15 +8,15 @@ local branch = "master"
 local files = {
   {
     name = "openbee-update",
-    url = "https://raw.githubusercontent.com/MrEmielH/Openbee-MrEmielH/"..branch.."/openbee-install"
+    url = "https://raw.githubusercontent.com/GHXX/Openbee/"..branch.."/openbee-install"
   },
   {
     name = "openbee",
-    url = "https://raw.githubusercontent.com/MrEmielH/Openbee-MrEmielH/"..branch.."/openbee"
+    url = "https://raw.githubusercontent.com/GHXX/Openbee/"..branch.."/openbee"
   },
   {
     name = "changelog",
-    url = "https://raw.githubusercontent.com/MrEmielH/Openbee-MrEmielH/"..branch.."/changelog.txt"
+    url = "https://raw.githubusercontent.com/GHXX/Openbee/"..branch.."/changelog.txt"
   }
 }
 
