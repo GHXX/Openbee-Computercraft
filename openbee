@@ -1,3 +1,8 @@
+-- mc version 1.12.2
+-- to be used with CC Tweaked (cc-tweaked-1.12.2-1.86.2) and Plethora (plethora-1.12.2-1.2.3)
+
+-- original version by MrEmielH (https://github.com/MrEmielH/Openbee-MrEmielH)
+
 local version = {
   ["major"] = 3,
   ["minor"] = 0,
