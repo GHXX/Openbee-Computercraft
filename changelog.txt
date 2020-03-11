@@ -1,5 +1,4 @@
 changelog
-installer pastebin get HuiHMfx6
 
 3.0.0
 The Mutatron Update: added support for the gendustry Mutatron
