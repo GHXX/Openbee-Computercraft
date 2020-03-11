@@ -358,24 +358,16 @@ end
 
 -- percent chance of 2 bees turning into target species
 function mutateBeeChance(mutations, princess, drone, targetSpecies)
-
-	log("targetsp: "..targetSpecies.."=")
-	local pct = nil
   if princess.individual.analyzed then
     if drone.individual.analyzed then
-      pct= (mutateSpeciesChance(mutations, princess.individual.genome.active.species.id, drone.individual.genome.active.species.id, targetSpecies) / 4
+      return (mutateSpeciesChance(mutations, princess.individual.genome.active.species.id, drone.individual.genome.active.species.id, targetSpecies) / 4
              +mutateSpeciesChance(mutations, princess.individual.genome.inactive.species.id, drone.individual.genome.active.species.id, targetSpecies) / 4
              +mutateSpeciesChance(mutations, princess.individual.genome.active.species.id, drone.individual.genome.inactive.species.id, targetSpecies) / 4
              +mutateSpeciesChance(mutations, princess.individual.genome.inactive.species.id, drone.individual.genome.inactive.species.id, targetSpecies) / 4)
     end
   elseif drone.individual.analyzed then
   else
-    pct= mutateSpeciesChance(princess.individual.id, drone.individual.id, targetSpecies)
-  end
-  
-  logLine(pct.."%")
-  if pct ~= nil then
-  return pct
+    return mutateSpeciesChance(princess.individual.id, drone.individual.id, targetSpecies)
   end
 end
 
