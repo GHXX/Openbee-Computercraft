@@ -234,7 +234,7 @@ function printBee(bee)
     if active.species.id ~= inactive.species.id then
       log(string.format("%s-%s", active.species.displayName, inactive.species.displayName))
     else
-      log(active.species.id)
+      log(active.species.displayName)
     end
     if bee.rawName == "item.for.bee_drone_ge" then
       log(" Drone")
